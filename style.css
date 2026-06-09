@@ -1,0 +1,247 @@
+:root{
+    --cream: #efe6ce;
+    --brown: #665750;
+    --pink: #e7c8c2;
+    --light-pink: #f4ddda;
+    --white: #fffdf8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background-color: var(--cream);
+    color: var(--brown);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ---------- NAVBAR ---------- */
+
+nav{
+    background-color: var(--white);
+    padding: 18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--brown);
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--pink);
+}
+
+/* ---------- HOME PAGE ---------- */
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero-content{
+    max-width:700px;
+    margin:auto;
+}
+
+.profile-pic{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #e7c8c2;
+    margin-bottom:25px;
+}
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    max-width:650px;
+    margin:0 auto;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.button,
+.project-link{
+    display:inline-block;
+    background-color:var(--pink);
+    color:var(--brown);
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:10px;
+    margin-top:20px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.button:hover,
+.project-link{
+    background-color:var(--light-pink);
+}
+
+/* ---------- PAGE TITLES ---------- */
+
+.page-title{
+    text-align:center;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:2.5rem;
+}
+
+/* ---------- PROJECTS ---------- */
+
+.project-container{
+    max-width:900px;        /* keeps everything centered and narrower */
+    margin:0 auto;
+    padding:40px 20px;
+
+    display:grid;
+    grid-template-columns:1fr;   /* forces ONE column */
+    gap:25px;
+}
+
+.project-card{
+    background-color:var(--white);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+}
+
+.project-image{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:30px;
+}
+
+.project-content h2{
+    margin-bottom:15px;
+}
+
+.project-content h3{
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.project-content ul{
+    margin-left:20px;
+}
+
+.project-content p{
+    margin-bottom:10px;
+}
+
+/* ---------- RESUME ---------- */
+
+.resume-section{
+    max-width:1100px;
+    margin:50px auto;
+    text-align:center;
+    padding:20px;
+}
+
+.resume-section iframe{
+    width:100%;
+    height:800px;
+    border:none;
+    border-radius:12px;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.contact h1{
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin-bottom:10px;
+    font-size:1.1rem;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    background-color:var(--white);
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .profile-pic{
+        width:180px;
+        height:180px;
+    }
+
+    .project-container{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+}
+
